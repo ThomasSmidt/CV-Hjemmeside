@@ -1,5 +1,4 @@
-* {
-    outline: 1px solid red;
+* { 
     padding: 0;
     margin: 0;
 }
@@ -9,7 +8,7 @@ body {
     background-color: #ffffff;
     color: #565141;
     font-weight: 100;
-    padding: 5px 300px 0px 300px;
+    padding: 5px 300px 50px 300px;
 }
 
 #header-container {
@@ -32,49 +31,61 @@ body {
 }
 
 #info-container {
-    display: flex;    
+    border-top: 1px solid #565141;
+    display: flex;  
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
-#kontakt-container {
-    flex-basis: 50%;
+#kontakt-container, #skills-container, #uddannelse-container, #erfaring-container, #kompetencer-container{
+    flex-basis: 100%;
     width: 300px;
-    padding: 5px;
+    height: fit-content;
     display: flex;
     flex-wrap:wrap;
-    padding: 2px;
-    gap: 3px;
-}
-
-#kontakt {
-    flex-basis: 100%;
-}
-
-.kontakt-info {
-    flex-basis: 92%;
-    padding-left: 5px;
-}
-
-#skills-container{
-    flex-basis: 50%;
-    width: 300px;
     padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2px;
     gap: 3px;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    text-align: left;
+
+}
+
+#kontakt, #skills, #uddannelse, #erfaring #p-kompetencer{
+    flex-basis: 100%;
     justify-content: center;
 }
 
-#skills {
-    flex-basis: 100%;
-    
+.kontakt-info, .skills-info {
+    flex-basis: 96%;
 }
 
-.skills-info {
-    flex-basis: 92%;
-    padding-left: 5px;
-}
 
 .icons {
-    flex-basis: 3%;   
+    flex-basis: 3%; 
+    transform: scale(.6); 
+    margin-left: -15px; 
+}
+
+.subtitle {
+    flex-basis: 100%;
+    font-weight: 500;
+    color: #8e8570;
+    font-size: 15px;
+}
+
+#p-kompetencer, #erfaring{
+    width: 100%;
+}
+
+.udd-info {
+    flex-basis: 100%;
+    font-size: 13px;
+    color: #8e8570;
+}
+
+.hobbyer {
+    color: #8e8570;
 }

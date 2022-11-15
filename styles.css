@@ -1,0 +1,80 @@
+* {
+    outline: 1px solid red;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #565141;
+    font-weight: 100;
+    padding: 5px 300px 0px 300px;
+}
+
+#header-container {
+    display: flex;
+    text-align: left;
+    align-items: left;
+    flex-direction: column;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+#header-text {
+    border-bottom: 1px solid #565141;
+    width: fit-content;
+}
+
+#header-subtext {
+    width: fit-content;
+    font-weight: 100;
+}
+
+#info-container {
+    display: flex;    
+}
+
+#kontakt-container {
+    flex-basis: 50%;
+    width: 300px;
+    padding: 5px;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 2px;
+    gap: 3px;
+}
+
+#kontakt {
+    flex-basis: 100%;
+}
+
+.kontakt-info {
+    flex-basis: 92%;
+    padding-left: 5px;
+}
+
+#skills-container{
+    flex-basis: 50%;
+    width: 300px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    gap: 3px;
+    justify-content: center;
+}
+
+#skills {
+    flex-basis: 100%;
+    
+}
+
+.skills-info {
+    flex-basis: 92%;
+    padding-left: 5px;
+}
+
+.icons {
+    flex-basis: 3%;   
+}

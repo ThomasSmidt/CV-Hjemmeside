@@ -1,91 +1,212 @@
-* { 
+* {
     padding: 0;
     margin: 0;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #565141;
+    background: linear-gradient(260deg, rgba(36,36,36,1) 0%, rgba(51,51,51,1) 33%, rgba(51,51,51,1) 66%, rgba(29,29,29,1) 100%);
+    color: #ffffff;
     font-weight: 100;
-    padding: 5px 300px 50px 300px;
+    width: 60%;
+    margin: 0 auto;
+
 }
+ #wrapper {
+    background-color: #202020;
+    width: 100%;
+ }
 
 #header-container {
+    font-size: 2em;
     display: flex;
     text-align: left;
     align-items: left;
     flex-direction: column;
-    margin: 0px;
-    padding-bottom: 20px;
+    margin: 0 0 10px 0;
+    padding: 20px;
+    background: linear-gradient(260deg, rgba(69,69,69,1) 0%, rgba(29,29,29,1) 100%);
+    border-bottom: 1px solid rgb(68, 68, 68);
+    box-shadow: 0 10px 10px -10px black;
 }
 
 #header-text {
-    border-bottom: 1px solid #565141;
+    border-bottom: 1px solid rgb(68, 68, 68);
     width: fit-content;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.15em;
 }
 
 #header-subtext {
     width: fit-content;
     font-weight: 100;
+    font-size: .4em;
+    color: #ffffff;
+}
+
+#projects-container {
+    position: relative;
+    width: 100%;
+    display: flex;    
+    border-bottom: 1px solid rgb(68, 68, 68);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 25px  25px;
+}
+
+#projekter {
+    flex-basis: 100%;
+}
+
+#blackjack-container, #jobtest-container {
+    width: 45%;
+    height: 30vh;
+    padding: 0px 10px 10px 10px;
+}
+
+#img-text {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.img-overlay {
+    background-color:#0000004f;
+    position: relative;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+#jack-img-container, #jobtest-img-container{
+    width: 100%;
+    height: 100%;
+}
+
+#blackjack-container:hover .img-overlay {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0px -1px 12px 4px rgba(0,0,0,0.55);
+}
+
+#blackjack-container:hover img{
+    filter: blur(1%);
+    filter: grayscale(40%);
+}
+
+
+#jobtest-container:hover .img-overlay {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0px -1px 12px 4px rgba(0,0,0,0.55);
+}
+
+#jobtest-container:hover img{
+    filter: grayscale(40%);
+}
+
+#blackjack, #jobtest-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.img-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 #info-container {
-    border-top: 1px solid #565141;
     display: flex;  
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 10px;
 }
 
-#kontakt-container, #skills-container, #uddannelse-container, #erfaring-container, #kompetencer-container{
+#kontakt-container, #skills-container, #uddannelse-container, #erfaring-container, #kompetencer-container, #hobbyer-container, #projects-container{
     flex-basis: 100%;
-    width: 300px;
     height: fit-content;
     display: flex;
-    flex-wrap:wrap;
-    padding: 5px;
-    gap: 3px;
+    flex-wrap: wrap;
+    padding: 10px 25px 20px 25px;
+    gap: 4px;
     justify-content: center;
     align-items: center;
-    align-content: flex-start;
     text-align: left;
-
+    border-bottom: 1px solid rgb(68, 68, 68);
 }
 
-#kontakt, #skills, #uddannelse, #erfaring #p-kompetencer{
+#kontakt, #skills, #uddannelse, #erfaring, #p-kompetencer, #projekter{
     flex-basis: 100%;
     justify-content: center;
 }
 
-.kontakt-info, .skills-info {
-    flex-basis: 96%;
-}
 
+.kontakt-info, .skills-info {
+    flex-basis: 96%;    
+}
 
 .icons {
     flex-basis: 3%; 
-    transform: scale(.6); 
-    margin-left: -15px; 
+    transform: scale(.7); 
+    margin-left: -10px;
+    margin-bottom: -3px;
+    filter: invert(100%) sepia(76%) saturate(634%) hue-rotate(288deg) brightness(118%) contrast(99%);
 }
 
 .subtitle {
     flex-basis: 100%;
     font-weight: 500;
-    color: #8e8570;
-    font-size: 15px;
 }
 
-#p-kompetencer, #erfaring{
+#p-kompetencer, #erfaring, #uddannelse, #kontakt, #skills, #projekter, #hobbyer-title{ 
+    font-size: 1.5em;
     width: 100%;
+    padding: 0px 0 10px 0;
 }
 
 .udd-info {
     flex-basis: 100%;
-    font-size: 13px;
-    color: #8e8570;
+    font-size: 1em;
 }
 
-.hobbyer {
-    color: #8e8570;
+#hobbyer-container {
+    justify-content: left;
+}
+
+.bottom-padding {
+    padding-bottom: 10px;
+}
+
+#kontakt-container {
+    padding-top: 20px;
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .kontakt-info, .skills-info {
+        flex-basis: 93%;    
+    }
+
 }

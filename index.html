@@ -5,78 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Thomas Smidt - Portfolio</title>
 </head>
 <body>
-    <header id="header-container">
-        <h1 id="header-text">Thomas Smidt</h1>
-        <h2 id="header-subtext">Portfolio Hjemmeside</h2>
-    </header>
-    <section id="info-container">
-        <div id="kontakt-container">
-            <h3 id="kontakt" class="info-header">Kontakt</h3>
-            <img class="icons" id="phone-icon" src="assets/phone.svg" alt="">
-            <span class="kontakt-info" id="phone-number">20 63 93 98</span>
-            <img class="icons" id="email-icon" src="assets/mail.svg" alt="">
-            <span class="kontakt-info" id="email">smidt592@gmail.com</span>
-            <img class="icons" id="location-icon" src="assets/map-pin.svg" alt="">
-            <span class="kontakt-info" id="location">Bystrædet 20A, 2610 Rødovre</span>
-            <img class="icons" id="birthday-icon" src="assets/gift.svg" alt="">
-            <span class="kontakt-info" id="birthday">6. Marts 1998</span>
-        </div>
+    <div id="wrapper">
+        <header id="header-container">
+            <h1 id="header-text">Thomas Smidt</h1>
+            <h2 id="header-subtext">Datatekniker med speciale i programmering</h2>
+        </header>
+            <section id="projects-container">
+            <h2 id="projekter">Projekter</h2>
+            <!-- Slider main container -->
+            <div id="blackjack-container">
+                <div id="jack-img-container">
+                    <img src="assets/blackjack-thumbnail.PNG" alt="" id="blackjack">
+                </div>            
+                <div class="img-overlay" >
+                    <div id="img-text">Blackjack (HTML/CSS/JS)</div>
+                    <a href="https://github.com/ThomasSmidt/BlackJack">
+                        <span class="img-link"></span>
+                    </a>
+                </div>
+            </div>
+            <div id="jobtest-container">
+                <div id="jobtest-img-container">
+                    <img src="assets/WBC.PNG" alt="" id="jobtest-img">
+                </div>
+                <div class="img-overlay" >
+                    <div id="img-text">Hjemmeside lavet til en Jobtest (HTML/CSS/JS)</div>
+                    <a href="https://github.com/ThomasSmidt/WBC">
+                        <span class="img-link"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div id="uddannelse-container">
-            <h3 id="uddannelse">Uddannelse</h3>
-            <span class="subtitle">TEC Ballerup</span>
-            <em class="udd-info">Marts 2022 -</em>
-            <span class="udd-info">Data- og kommunikationslinjen - Grundforløb 2</span>
-            <span class="subtitle">Frederiksberg HF</span>
-            <em class="udd-info">August. 2020 -  Oktober. 2021</em>
-            <span class="udd-info">Jeg tog halvandet år på HF, hvorefter, jeg besluttede mig for at starte på TEC.  Jeg afsluttede fagene: Naturfag, Geografi C, Matematik C, Musik C, Fysik C</span>
-        </div>
+        <section id="info-container">
+            <div id="kontakt-container">
+                <h3 id="kontakt">Kontakt</h3>
+                <img class="icons" id="phone-icon" src="assets/phone.svg" alt="">
+                <span class="kontakt-info" id="phone-number">20 63 93 98</span>
+                <img class="icons" id="email-icon" src="assets/mail.svg" alt="">
+                <span class="kontakt-info" id="email">smidt592@gmail.com</span>
+                <img class="icons" id="location-icon" src="assets/map-pin.svg" alt="">
+                <span class="kontakt-info" id="location">Bystrædet 20A, 2610 Rødovre</span>
+                <img class="icons" id="birthday-icon" src="assets/gift.svg" alt="">
+                <span class="kontakt-info" id="birthday">6. Marts 1998</span>
+            </div>
 
-        <div id="skills-container">
-            <h3 id="skills">IT-Færdigheder</h3>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Javascript</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">C#</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">HTML / CSS</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">CCNA (Introduction To Networking)</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Adobe Photoshop / Adobe After Effects</span>
-        </div>
-        <div id="erfaring-container">
-            <h3 id="erfaring">Erfaring</h3>
-            <span class="subtitle">Ramundberget Skiresort</span>
-            <em class="udd-info">2018 - 2019</em>
-            <span class="udd-info">Jeg var i lære som Kok på et skiresort i Sverige, arbejdet krævede, at man altid var klar i hovedet og parat til at løse de mange problemer der opstår i et køkken. Jeg lærte at arbejde hurtigt og effektivt under pres, at være struktureret og organiseret, både inde- og udenfor køkkenet, at have et godt samarbejde med mine kollegaer,  og at presse mig selv, for at opnå en bedre fungerende arbejdsplads.
-            </span>
-            <span class="subtitle">Netto - Servicemedarbejder</span>
-            <em class="udd-info">2016 - 2017</em>
-            <span class="udd-info">Lærte at være serviceminded og imødekommende over for kunderne. Plukning af varer, rengøring, kassearbejde mm.</span>
-        </div>   
-        <div id="kompetencer-container">
-            <h3 id="p-kompetencer">Personlige Kompetencer</h3>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Lærenem</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Ambitiøs</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Omstillingsparat</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Engageret</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Imødekommende</span>
-            <img src="assets/plus-circle.svg" alt="" class="icons">
-            <span class="skills-info">Kreativ</span>
-        </div>
-        <div id="hobbyer-container">
-            <h3 id="hobbyer-title">Hobbyer</h3>
-            <span class="hobbyer">Programmering | Musikproduktion | Videoproduktion | Billedredigering | Madlavning | Gaming |</span>
-        </div>
-    </section>
+            <div id="uddannelse-container">
+                <h3 id="uddannelse">Uddannelse</h3>
+                <span class="subtitle">TEC Ballerup</span>
+                <em class="udd-info">Marts 2022 -</em>
+                <span class="udd-info bottom-padding">Data- og kommunikationslinjen - Grundforløb 2</span>
+                <span class="subtitle">Frederiksberg HF</span>
+                <em class="udd-info">August. 2020 -  Oktober. 2021</em>
+                <span class="udd-info">Jeg tog halvandet år på HF, hvorefter, jeg besluttede mig for at starte på TEC.  Jeg afsluttede fagene: Naturfag, Geografi C, Matematik C, Musik C og Fysik C.</span>
+            </div>
+
+            <div id="erfaring-container">
+                <h3 id="erfaring">Erfaring</h3>
+                <span class="subtitle">Ramundberget Skiresort</span>
+                <em class="udd-info">2018 - 2019</em>
+                <span  class="udd-info bottom-padding">Jeg var i lære som Kok på et skiresort i Sverige, arbejdet krævede, at man altid var klar i hovedet og parat til at løse de mange problemer der opstår i et køkken. Jeg lærte at arbejde hurtigt og effektivt under pres, at være struktureret og organiseret, både inde- og udenfor køkkenet, at have et godt samarbejde med mine kollegaer,  og at presse mig selv, for at opnå en bedre fungerende arbejdsplads.
+                </span>
+                <span class="subtitle">Netto - Servicemedarbejder</span>
+                <em class="udd-info">2016 - 2017</em>
+                <span class="udd-info">Lærte at være serviceminded og imødekommende over for kunderne. Plukning af varer, rengøring, kassearbejde mm.</span>
+            </div>  
+
+            <div id="skills-container">
+                <h3 id="skills">IT-Færdigheder</h3>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Javascript</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">C#</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">HTML / CSS</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">CCNA (Introduction To Networking)</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Adobe Photoshop / Adobe After Effects</span>
+            </div>
+
+            <div id="kompetencer-container">
+                <h3 id="p-kompetencer">Personlige Kompetencer</h3>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Lærenem</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Ambitiøs</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Omstillingsparat</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Engageret</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Imødekommende</span>
+                <img src="assets/plus-circle.svg" alt="" class="icons">
+                <span class="skills-info">Kreativ</span>
+            </div>
+
+            <div id="hobbyer-container">
+                <h3 id="hobbyer-title">Hobbyer</h3>
+                <span class="hobbyer">Programmering | Musikproduktion | Videoproduktion | Billedredigering | Madlavning | Gaming</span>
+            </div>
+        </section>           
+    </div>
 </body>
 </html>

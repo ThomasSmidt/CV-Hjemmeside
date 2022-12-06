@@ -4,6 +4,8 @@
     font-size: 10px;
     box-sizing: border-box;
 }
+
+/*header*/
 #logo-container {
     /*reset a*/
     text-decoration: none;

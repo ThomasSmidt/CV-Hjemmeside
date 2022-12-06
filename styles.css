@@ -5,9 +5,13 @@
     box-sizing: border-box;
 }
 
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+}
+
 /*header*/
 #logo-container {
-    /*reset a*/
     text-decoration: none;
     cursor: pointer;
     width: fit-content;

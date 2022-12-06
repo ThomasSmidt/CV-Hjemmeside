@@ -1,50 +1,100 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 1em;
+    font-size: 10px;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(260deg, rgba(36,36,36,1) 0%, rgba(51,51,51,1) 33%, rgba(51,51,51,1) 66%, rgba(29,29,29,1) 100%);
+    /*background: linear-gradient(260deg, rgba(36,36,36,1) 0%, rgba(51,51,51,1) 33%, rgba(51,51,51,1) 66%, rgba(29,29,29,1) 100%);*/
     color: #ffffff;
     font-weight: 100;
-    width: 60%;
-    margin: 0 auto;
-
-}
- #wrapper {
-    background-color: #202020;
     width: 100%;
+    background-color: #100a1f;
+}
+
+ #wrapper {
+    background: linear-gradient(90deg, rgba(37,34,51,1) 0%, rgba(50,46,69,1) 50%, rgba(37,34,51,1) 100%);
+    width: 62%;
+    margin: 0 auto;
+    z-index: -1;
+    padding-bottom: 100px;
  }
 
+ .blob {
+    width: 14rem;
+    position: absolute;
+    top: -1%;
+    left: 19%;
+    transition: ease-in-out 400ms;
+    z-index: 2;
+    opacity: 80%;
+ }
+
+ #blue-blob {
+    transition: ease-in-out 450ms;
+ }
+
+ #yellow-blob {
+    transition: ease-in-out 500ms;
+ }
+
+ #header-container:hover #blue-blob{
+    transform: rotate(110deg);
+ }
+
+ #header-container:hover #red-blob{
+    transform:translateX(10px);
+ }
+
+ #header-container:hover #yellow-blob{
+    transform:rotate(-30deg);
+ }
+
+ .blob-wrapper {
+    transition: ease-in-out 500ms;
+    position: absolute;
+    top: -1%;
+    left: 19%;
+ }
+
+ #header-container:hover .blob-wrapper img{
+    width: 15rem;
+ }
+
+
 #header-container {
-    font-size: 2em;
+    cursor:pointer;
+    font-size: 2rem;
     display: flex;
     text-align: left;
     align-items: left;
     flex-direction: column;
-    margin: 0 0 10px 0;
-    padding: 20px;
-    background: linear-gradient(260deg, rgba(69,69,69,1) 0%, rgba(29,29,29,1) 100%);
-    border-bottom: 1px solid rgb(68, 68, 68);
+    padding: 20px 20px 20px 20vw;
+    /*background: linear-gradient(260deg, rgba(69,69,69,1) 0%, rgba(29,29,29,1) 100%);*/
+    background:#1a1824;
     box-shadow: 0 10px 10px -10px black;
+    z-index: 5;
+    
 }
 
 #header-text {
-    border-bottom: 1px solid rgb(68, 68, 68);
+    z-index: 3;
+    border-bottom: 1px solid rgb(255, 255, 255);
     width: fit-content;
     color: #ffffff;
     font-weight: 600;
-    font-size: 1.15em;
+    font-size: 5rem;
 }
 
 #header-subtext {
     width: fit-content;
     font-weight: 100;
-    font-size: .4em;
+    font-size: 2rem;
     color: #ffffff;
+    z-index: 3;
+
 }
 
 #projects-container {
@@ -54,7 +104,7 @@ body {
     border-bottom: 1px solid rgb(68, 68, 68);
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 0px 25px  25px;
+    padding: 0px 25px 25px;
 }
 
 #projekter {
@@ -69,7 +119,7 @@ body {
 
 #img-text {
     color: #fff;
-    font-size: 20px;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,6 +137,8 @@ body {
     transition: .5s ease;
     border-radius: 10px;
 }
+
+
 
 #jack-img-container, #jobtest-img-container{
     width: 100%;
@@ -159,6 +211,7 @@ body {
 
 
 .kontakt-info, .skills-info {
+    font-size: 2rem;
     flex-basis: 96%;    
 }
 
@@ -171,19 +224,21 @@ body {
 }
 
 .subtitle {
+    font-size: 2rem;
     flex-basis: 100%;
     font-weight: 500;
 }
 
 #p-kompetencer, #erfaring, #uddannelse, #kontakt, #skills, #projekter, #hobbyer-title{ 
-    font-size: 1.5em;
+    font-size: 2.5rem;
     width: 100%;
     padding: 0px 0 10px 0;
 }
 
 .udd-info {
     flex-basis: 100%;
-    font-size: 1em;
+    font-size: 2rem;
+
 }
 
 #hobbyer-container {
@@ -198,10 +253,26 @@ body {
     padding-top: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
     body {
         width: 100%;
     }
+    #header-container {
+        padding-left: 2.5rem;
+    }
+    #wrapper {
+        width: 100%;
+    }
+    .blob-wrapper {
+        left: 0;
+    }
+    #blackjack-container, #jobtest-container {
+        width: 49%;
+        height: 30vh;
+        padding: 0px 5px 10px 5px;
+    }
+    
+
 }
 
 @media (max-width: 500px) {

@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Thomas Smidt - Portfolio</title>
 </head>
 <body>
-    <div id="wrapper">
-        <header id="header-container">
-            <h1 id="header-text">Thomas Smidt</h1>
-            <h2 id="header-subtext">Datatekniker med speciale i programmering</h2>
-        </header>
+    <header id="header-container">
+        <div class="blob-wrapper" data-aos="fade-down" data-aos-duration="1100">
+            <img src="assets/blue_blob.png" alt="" class="blob" id="blue-blob">
+            <img src="assets/red_blob.png" alt="" class="blob" id="red-blob">
+            <img src="assets/yellow_blob.png" alt="" class="blob" id="yellow-blob">
+        </div>
+        <h1 id="header-text" data-aos="fade-left" data-aos-duration="1000">Thomas Smidt</h1>
+        <h2 id="header-subtext" data-aos="fade-left" data-aos-duration="1200">Datatekniker med speciale i programmering</h2>
+    </header>
+    <div id="wrapper">       
             <section id="projects-container">
-            <h2 id="projekter">Projekter</h2>
-            <!-- Slider main container -->
-            <div id="blackjack-container">
+            <h2 id="projekter" data-aos="fade-left" data-aos-duration="1200">Projekter</h2>
+            <div id="blackjack-container" data-aos="flip-right" data-aos-duration="1700">
                 <div id="jack-img-container">
                     <img src="assets/blackjack-thumbnail.png" alt="" id="blackjack">
                 </div>            
@@ -27,7 +32,7 @@
                     </a>
                 </div>
             </div>
-            <div id="jobtest-container">
+            <div id="jobtest-container" data-aos="flip-left" data-aos-duration="1700">
                 <div id="jobtest-img-container">
                     <img src="assets/WBC.png" alt="" id="jobtest-img">
                 </div>
@@ -41,7 +46,7 @@
         </section>
 
         <section id="info-container">
-            <div id="kontakt-container">
+            <div id="kontakt-container" data-aos="flip-up" data-aos-duration="1200">
                 <h3 id="kontakt">Kontakt</h3>
                 <img class="icons" id="phone-icon" src="assets/phone.svg" alt="">
                 <span class="kontakt-info" id="phone-number">20 63 93 98</span>
@@ -53,7 +58,12 @@
                 <span class="kontakt-info" id="birthday">6. Marts 1998</span>
             </div>
 
-            <div id="uddannelse-container">
+            <div id="uddannelse-container" data-aos="flip-down" data-aos-duration="1100">
+                <h3 id="uddannelse">Personlig Profil</h3>
+                <span class="udd-info bottom-padding">Passion for at lære nye færdigheder og mestre dem. Kreativ og engageret med en flair for problemløsning og en interesse for programmering. Opfanger hurtigt ny viden og færdigheder til brug i praktiske sammenhæng. Arbejder hårdt for at sikre mig, at produktet jeg skaber altid er af høj kvalitet. Introvert, men socialt velfungerende og glad for samarbejde med kollegaer.</span>
+            </div>
+
+            <div id="uddannelse-container" data-aos="fade-up">
                 <h3 id="uddannelse">Uddannelse</h3>
                 <span class="subtitle">TEC Ballerup</span>
                 <em class="udd-info">Marts 2022 -</em>
@@ -63,7 +73,7 @@
                 <span class="udd-info">Jeg tog halvandet år på HF, hvorefter, jeg besluttede mig for at starte på TEC.  Jeg afsluttede fagene: Naturfag, Geografi C, Matematik C, Musik C og Fysik C.</span>
             </div>
 
-            <div id="erfaring-container">
+            <div id="erfaring-container" data-aos="fade-up">
                 <h3 id="erfaring">Erfaring</h3>
                 <span class="subtitle">Ramundberget Skiresort</span>
                 <em class="udd-info">2018 - 2019</em>
@@ -74,7 +84,7 @@
                 <span class="udd-info">Lærte at være serviceminded og imødekommende over for kunderne. Plukning af varer, rengøring, kassearbejde mm.</span>
             </div>  
 
-            <div id="skills-container">
+            <div id="skills-container" data-aos="fade-up">
                 <h3 id="skills">IT-Færdigheder</h3>
                 <img src="assets/plus-circle.svg" alt="" class="icons">
                 <span class="skills-info">Javascript</span>
@@ -86,9 +96,9 @@
                 <span class="skills-info">CCNA (Introduction To Networking)</span>
                 <img src="assets/plus-circle.svg" alt="" class="icons">
                 <span class="skills-info">Adobe Photoshop / Adobe After Effects</span>
-            </div>
+        </div>
 
-            <div id="kompetencer-container">
+            <div id="kompetencer-container" data-aos="fade-up">
                 <h3 id="p-kompetencer">Personlige Kompetencer</h3>
                 <img src="assets/plus-circle.svg" alt="" class="icons">
                 <span class="skills-info">Lærenem</span>
@@ -104,11 +114,15 @@
                 <span class="skills-info">Kreativ</span>
             </div>
 
-            <div id="hobbyer-container">
-                <h3 id="hobbyer-title">Hobbyer</h3>
-                <span class="hobbyer">Programmering | Musikproduktion | Videoproduktion | Billedredigering | Madlavning | Gaming</span>
+            <div id="hobbyer-container" data-aos="fade-up">
+                <h3 id="hobbyer-title">Fritidsinteresser</h3>
+                <span class="hobbyer skills-info">Programmering | Musikproduktion | Videoproduktion | Billedredigering | Fodbold | Mad | Gaming | Venner og Familie</span>
             </div>
         </section>           
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

@@ -4,6 +4,12 @@
     font-size: 10px;
     box-sizing: border-box;
 }
+#logo-container {
+    /*reset a*/
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,28 +33,28 @@ body {
     position: absolute;
     top: -1%;
     left: 19%;
-    transition: ease-in-out 400ms;
+    transition: ease-out 350ms;
     z-index: 2;
     opacity: 80%;
  }
 
  #blue-blob {
-    transition: ease-in-out 450ms;
+    transition: ease-in-out 400ms;
  }
 
  #yellow-blob {
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 450ms;
  }
 
- #header-container:hover #blue-blob{
+ #logo-container:hover #blue-blob{
     transform: rotate(110deg);
  }
 
- #header-container:hover #red-blob{
+ #logo-container:hover #red-blob{
     transform:translateX(10px);
  }
 
- #header-container:hover #yellow-blob{
+ #logo-container:hover #yellow-blob{
     transform:rotate(-30deg);
  }
 
@@ -59,13 +65,12 @@ body {
     left: 19%;
  }
 
- #header-container:hover .blob-wrapper img{
+ #logo-container:hover .blob-wrapper img{
     width: 15rem;
  }
 
 
 #header-container {
-    cursor:pointer;
     font-size: 2rem;
     display: flex;
     text-align: left;
@@ -133,7 +138,7 @@ body {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: .5s;
     border-radius: 10px;
 }
 
@@ -147,7 +152,7 @@ body {
 #blackjack-container:hover .img-overlay {
     opacity: 1;
     cursor: pointer;
-    box-shadow: 0px -1px 12px 4px rgba(0,0,0,0.55);
+    box-shadow: 0px -1px 12px 4px rgba(186, 208, 255, 0.199);
 }
 
 #blackjack-container:hover img{
@@ -159,7 +164,8 @@ body {
 #jobtest-container:hover .img-overlay {
     opacity: 1;
     cursor: pointer;
-    box-shadow: 0px -1px 12px 4px rgba(0,0,0,0.55);
+    box-shadow: 0px -1px 12px 4px rgba(186, 208, 255, 0.425);
+
 }
 
 #jobtest-container:hover img{

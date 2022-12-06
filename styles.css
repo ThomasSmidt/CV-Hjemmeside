@@ -270,7 +270,9 @@ body {
         height: 30vh;
         padding: 0px 5px 10px 5px;
     }
-    
+    .img-overlay {
+        opacity: 100%;
+    }
 
 }
 
@@ -285,7 +287,5 @@ body {
     #img-text {
         font-size: 1.7rem;
     }
-    .img-overlay {
-        opacity: 100%;
-    }
+
 }

@@ -94,7 +94,6 @@ body {
     font-size: 2rem;
     color: #ffffff;
     z-index: 3;
-
 }
 
 #projects-container {
@@ -279,5 +278,14 @@ body {
     .kontakt-info, .skills-info {
         flex-basis: 93%;    
     }
+    #header-subtext {
+        font-size: 1.75rem;
+    }
 
+    #img-text {
+        font-size: 1.7rem;
+    }
+    .img-overlay {
+        opacity: 100%;
+    }
 }

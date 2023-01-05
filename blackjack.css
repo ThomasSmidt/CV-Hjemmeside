@@ -355,7 +355,11 @@ input[type=range]::-webkit-slider-runnable-track {
         background-size: 100vw;
         background-position: center center;
     }
+    #logo-container {
+        display: none;
+    }
     .no-mobile-support {
+        font-size: 1rem;
         position:fixed;
         /*center position fixed*/
         top: 50%;

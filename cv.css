@@ -123,6 +123,10 @@ h2{
     border-bottom: 1px solid rgba(255, 255, 255, 0.219);
 }
 
+#hobbyer-container {
+    border-bottom:0px;
+}
+
 #kontakt, #skills, #uddannelse, #erfaring, #p-kompetencer, #projekter, #hobbyer-title{
     flex-basis: 100%;
     text-align: center;

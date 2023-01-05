@@ -143,6 +143,7 @@ async function stay() {
     }
     canHit = false;
     console.log("dealer: " + dealerTotal + "player: " + playerTotal)
+    document.getElementById("hidden-card").src = "/assets/img/" + hiddenCard.cardValue + "_" + hiddenCard.cardSuit + ".png";
     while(dealerTotal < 17){
       isDealer = true;
       let cardImg = document.createElement("img");
@@ -159,7 +160,7 @@ async function stay() {
       // Add a delay of 1 second (1000 milliseconds)
       await sleep(500);
     }
-    document.getElementById("hidden-card").src = "/assets/img/" + hiddenCard.cardValue + "_" + hiddenCard.cardSuit + ".png";
+    
     document.getElementById("dealer-total").innerHTML = "Dealer: " + dealerTotal;
     document.getElementById("player-total").innerHTML = "You:   " + playerTotal;
     checkRound();

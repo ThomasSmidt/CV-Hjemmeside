@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Quicksand:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +21,33 @@ body {
     background-color: #001d04;
 }
 
+#logo-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-align: left;
+    font-family: 'Exo', sans-serif;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+}
+#logo-container:hover {
+    cursor: pointer;
+}
+
+#logo-container h1 {
+    font-weight: 500;
+}
+#logo-container h2{
+    margin-top: -15px;
+    font-size: 1.3rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
 .sum-container {
     width: 9%;
     display:flex;

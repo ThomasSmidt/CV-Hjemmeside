@@ -1,303 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Quicksand:wght@300&display=swap');
+
 * {
-    padding: 0;
     margin: 0;
-    font-size: 10px;
+    padding: 0;
     box-sizing: border-box;
+    font-size:calc(8px + .1vw);
+    font-family: 'Exo';
+
 }
 
-a {
-    color: white;
-    text-decoration: none; /* no underline */
-}
-
-/*header*/
-#logo-container {
-    text-decoration: none;
-    cursor: pointer;
-    width: fit-content;
+#video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(5px);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*background: linear-gradient(260deg, rgba(36,36,36,1) 0%, rgba(51,51,51,1) 33%, rgba(51,51,51,1) 66%, rgba(29,29,29,1) 100%);*/
-    color: #ffffff;
-    font-weight: 100;
-    width: 100%;
-    background-color: #100a1f;
+    background-color: black;
 }
 
- #wrapper {
-    background: linear-gradient(90deg, rgba(37,34,51,1) 0%, rgba(50,46,69,1) 50%, rgba(37,34,51,1) 100%);
-    width: 62%;
-    margin: 0 auto;
-    z-index: -1;
-    padding-bottom: 100px;
- }
+#wrapper{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
- .blob {
-    width: 14rem;
-    position: absolute;
-    top: -1%;
-    left: 19%;
-    transition: ease-out 350ms;
-    z-index: 2;
-    opacity: 80%;
- }
-
- #blue-blob {
-    transition: ease-in-out 400ms;
- }
-
- #yellow-blob {
-    transition: ease-in-out 450ms;
- }
-
- #logo-container:hover #blue-blob{
-    transform: rotate(110deg);
- }
-
- #logo-container:hover #red-blob{
-    transform:translateX(10px);
- }
-
- #logo-container:hover #yellow-blob{
-    transform:rotate(-30deg);
- }
-
- .blob-wrapper {
-    transition: ease-in-out 500ms;
-    position: absolute;
-    top: -1%;
-    left: 19%;
- }
-
- #logo-container:hover .blob-wrapper img{
-    width: 15rem;
- }
+#logo-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
 
 
 #header-container {
-    font-size: 2rem;
-    display: flex;
-    text-align: left;
-    align-items: left;
-    flex-direction: column;
-    padding: 20px 20px 20px 20vw;
-    /*background: linear-gradient(260deg, rgba(69,69,69,1) 0%, rgba(29,29,29,1) 100%);*/
-    background:#1a1824;
-    box-shadow: 0 10px 10px -10px black;
-    z-index: 5;
-    
+    margin: 0 auto;
+    width: 70%;
+    height: 15vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
 }
 
-#header-text {
-    z-index: 3;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    width: fit-content;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 5rem;
-}
-
-#header-subtext {
-    width: fit-content;
-    font-weight: 100;
-    font-size: 2rem;
-    color: #ffffff;
-    z-index: 3;
-}
-
-#projects-container {
-    position: relative;
-    width: 100%;
-    display: flex;    
-    border-bottom: 1px solid rgb(68, 68, 68);
-    flex-wrap: wrap;
+#hero {
+    margin: 0 auto;
+    width: 70%;
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    padding: 0px 25px 25px;
+    align-items: center;
+    padding: 2rem;
 }
 
-#projekter {
-    flex-basis: 100%;
-}
-
-#blackjack-container, #jobtest-container {
-    width: 45%;
-    height: 30vh;
-    padding: 0px 10px 10px 10px;
-}
-
-#img-text {
+h1, h2, a, span{
+    font-weight: 500;
     color: #fff;
-    font-size: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    text-decoration: none;
 }
 
-.img-overlay {
-    background-color:#0000004f;
-    position: relative;
-    top: -100%;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s;
-    border-radius: 10px;
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    padding: 0;
 }
 
-
-
-#jack-img-container, #jobtest-img-container{
-    width: 100%;
-    height: 100%;
+h2{
+    margin-top: -1rem;
+    font-size: 1.6rem;
 }
 
-#blackjack-container:hover .img-overlay {
-    opacity: 1;
-    cursor: pointer;
-    box-shadow: 0px -1px 12px 4px rgba(186, 208, 255, 0.199);
-}
-
-#blackjack-container:hover img{
-    filter: blur(1%);
-    filter: grayscale(40%);
-}
-
-
-#jobtest-container:hover .img-overlay {
-    opacity: 1;
-    cursor: pointer;
-    box-shadow: 0px -1px 12px 4px rgba(186, 208, 255, 0.425);
-
-}
-
-#jobtest-container:hover img{
-    filter: grayscale(40%);
-}
-
-#blackjack, #jobtest-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: .5s ease;
-}
-
-.img-link {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#info-container {
-    display: flex;  
-    flex-wrap: wrap;
-    row-gap: 10px;
-    column-gap: 10px;
-}
-
-#kontakt-container, #skills-container, #uddannelse-container, #erfaring-container, #kompetencer-container, #hobbyer-container, #projects-container{
-    flex-basis: 100%;
-    height: fit-content;
+#info {
     display: flex;
-    flex-wrap: wrap;
-    padding: 10px 25px 20px 25px;
-    gap: 4px;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
+    width: 47%;
+}
+
+#velkommen {
+    font-size: 10rem;
+}
+
+.details {
+    font-size: 2.6rem;
+}
+
+#links-container {
+    padding: 3rem;
+    margin: 2rem auto;
+    width: 40%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    border-bottom: 1px solid rgb(68, 68, 68);
+    flex-direction: row;
 }
 
-#kontakt, #skills, #uddannelse, #erfaring, #p-kompetencer, #projekter{
-    flex-basis: 100%;
-    justify-content: center;
+.links {
+    padding: 1rem;
+    font-size: 4rem;
+    flex-basis: 50%;
+    transition: all 0.5s ease;
 }
 
-
-.kontakt-info, .skills-info {
-    font-size: 2rem;
-    flex-basis: 96%;    
+.links:hover {
+    transform: scale(1.2);
 }
 
-.icons {
-    flex-basis: 3%; 
-    transform: scale(.7); 
-    margin-left: -10px;
-    margin-bottom: -3px;
-    filter: invert(100%) sepia(76%) saturate(634%) hue-rotate(288deg) brightness(118%) contrast(99%);
+#cv-billede {
+    height: 40rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
-.subtitle {
-    font-size: 2rem;
-    flex-basis: 100%;
-    font-weight: 500;
+#cv-billede:hover {
+    transform: scale(1.1);
 }
 
-#p-kompetencer, #erfaring, #uddannelse, #kontakt, #skills, #projekter, #hobbyer-title{ 
-    font-size: 2.5rem;
-    width: 100%;
-    padding: 0px 0 10px 0;
-}
-
-.udd-info {
-    flex-basis: 100%;
-    font-size: 2rem;
-
-}
-
-#hobbyer-container {
-    justify-content: left;
-}
-
-.bottom-padding {
-    padding-bottom: 10px;
-}
-
-#kontakt-container {
-    padding-top: 20px;
-}
-
-@media (max-width: 820px) {
-    body {
-        width: 100%;
-    }
-    #header-container {
-        padding-left: 2.5rem;
-    }
-    #wrapper {
-        width: 100%;
-    }
-    .blob-wrapper {
-        left: 0;
-    }
-    #blackjack-container, #jobtest-container {
-        width: 49%;
-        height: 30vh;
-        padding: 0px 5px 10px 5px;
-    }
-    .img-overlay {
-        opacity: 100%;
-    }
-
-}
-
-@media (max-width: 500px) {
-    .kontakt-info, .skills-info {
-        flex-basis: 93%;    
-    }
-    #header-subtext {
-        font-size: 1.75rem;
-    }
-
-    #img-text {
-        font-size: 1.7rem;
-    }
-
-}

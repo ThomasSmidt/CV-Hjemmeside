@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:calc(8px + .1vw);
+    font-family: 'Exo';
+}
+
+#video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+body {
+    background-image: url(assets/galaxy.jpg)
+}
+
+#wrapper{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#logo-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+#header-container {
+    margin: 0 auto;
+    width: 70%;
+    height: 15vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#hero {
+    margin: 0 auto;
+    width: 70%;
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1, h2, a, span{
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    padding: 0;
+}
+
+h2{
+    margin-top: -1rem;
+    font-size: 1.6rem;
+}
+
+#velkommen {
+    font-size: 10rem;
+}
+
+#links-container {
+    padding: 3rem;
+    margin: 2rem auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.links {
+    padding: 1rem;
+    font-size: 4rem;
+    flex-basis: 50%;
+    transition: all 0.5s ease;
+}
+
+.links:hover {
+    transform: scale(1.2);
+}
+
+#projects-container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+#blackjack-container, #blackjack-link, #jobtest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#blackjack-container img, #jobtest-container img{
+    width: 80%;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.466);
+}
+
+.project-text {
+    width: 80%;
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+#blackjack-container img:hover, #jobtest-container img:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 20px rgba(255, 138, 206, 0.466);
+
+}

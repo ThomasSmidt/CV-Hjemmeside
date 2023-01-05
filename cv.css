@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:calc(8px + .1vw);
+    font-family: 'Exo';
+}
+
+#video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+body {
+    background-image: url(assets/galaxy.jpg)
+}
+
+#wrapper{
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#logo-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+#header-container {
+    margin: 0 auto;
+    width: 70%;
+    height: 15vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#hero {
+    margin: 0 auto;
+    width: 70%;
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1, h2, a, span{
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    padding: 0;
+}
+
+h2{
+    margin-top: -1rem;
+    font-size: 1.6rem;
+}
+
+#links-container {
+    padding: 3rem;
+    margin: 2rem auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.links {
+    padding: 1rem;
+    font-size: 4rem;
+    flex-basis: 50%;
+    transition: all 0.5s ease;
+}
+
+.links:hover {
+    transform: scale(1.2);
+}
+
+#info-container {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;  
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    color: #fff;
+}
+
+#kontakt-container, #skills-container, #uddannelse-container, #erfaring-container, #kompetencer-container, #hobbyer-container, #projects-container{
+    flex-basis: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 25px 20px 25px;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+}
+
+#kontakt, #skills, #uddannelse, #erfaring, #p-kompetencer, #projekter, #hobbyer-title{
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.kontakt-info, .skills-info {
+    text-align: left;
+    font-size: 2rem;
+    flex-basis: 96%;    
+}
+
+.icons {
+    flex-basis: 3%; 
+    transform: scale(.7); 
+    margin-left: -10px;
+    filter: invert(100%) sepia(76%) saturate(634%) hue-rotate(288deg) brightness(118%) contrast(99%);
+}
+
+.subtitle {
+    font-size: 2rem;
+    flex-basis: 100%;
+    font-weight: 500;
+    
+}
+
+
+#p-kompetencer, #erfaring, #uddannelse, #kontakt, #skills, #projekter, #hobbyer-title{ 
+    font-size: 2.5rem;
+    width: 100%;
+    padding: 0px 0 10px 0;
+}
+
+.udd-info {
+    flex-basis: 100%;
+    font-size: 2rem;
+    text-align: left;
+
+}
+
+#hobbyer-container {
+    justify-content: left;
+}
+
+.bottom-padding {
+    padding-bottom: 10px;
+}
+
+#kontakt-container {
+    padding-top: 20px;
+}
+
+.hobbyer {
+    text-align: center;
+}

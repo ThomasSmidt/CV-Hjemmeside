@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wbc.css">
+    
+    <title>World Barista Cup</title>
+</head>
+<body>
+<!-- Div with an id of "overlay" to add a blur effect to the background on article popup -->
+    <div id="overlay">
+<!-- HEADER -->
+    <header class="header-container">
+        <div class="header-subcontainer">
+            <div class="logo-container">
+                <img src="assets/images/logo-white.png" alt="">
+            </div>
+            <div class="navbar-subcontainer">               
+                <img class="search-icon" src="assets/images/search.svg" id="search-icon" alt="" onclick="rotateSearchIcon();showData();" >
+                <div class="menu-container menu-tab" onclick="changeMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar3"></div>
+                </div>
+                <!-- SEARCHBAR -->
+                <div class="search-box">
+                    <input type="text" id="myInput" name="text" onkeyup="searchFunction()" onclick="showData()" class="searchbar" placeholder="search">
+                    <div class="search-content" id="hidden-search">
+                        <!-- List for popups in the search menu and a search icon -->
+                        <ul id="myUL">
+                            <img class="second-search-icon" src="assets/images/search.svg" alt="">
+                            <input type="text" id="mobile-search-input" name="text" onkeyup="searchFunctionMobile()" class="mobile-searchbar" placeholder="search">
+                            <li><a href="#" onclick="firstPopup()">
+                                <h2>Wonderful Copenhagen 2021</h2>
+                                <span class="search-publish">Published 12/0/21<br></span>
+                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ipsam officia mini...</span>
+                            </a></li>
+            
+                            <li><a href="#" onclick="secondPopup()">
+                                <h2>The most expensive coffee on the market</h2>
+                                <span class="search-publish">Published 12/0/21<br></span>
+                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ipsam officia mini...</span>
+                            </li></a>
+
+                            <li><a href="#" onclick="thirdPopup()">
+                                <h2>10 types of coffee beans you need to know</h2>
+                                <span class="search-publish">Published 12/0/21<br></span>
+                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ipsam officia mini...</span>
+                            </a></li>
+
+                            <li><a href="#" onclick="fourthPopup()">
+                                <h2>Challenge your barista skills to the max</h2>
+                                <span class="search-publish">Published 12/0/21<br></span>
+                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ipsam officia mini...</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="navbar-social" src="assets/images/linkedin-white.svg" alt="">
+                <img class="navbar-social" src="assets/images/twitter-white.svg" alt="">
+                <img class="navbar-social" src="assets/images/instagram-white.svg" alt="">
+                <img class="navbar-social" src="assets/images/facebook-white.svg" alt="">
+                <br>
+            </div>
+        </div>
+
+<!-- MOBILE MENU -->
+        <div class="link-container">
+            <nav id="hidden-menu">
+                <div>
+                    <a href="/" class="links">About us</a>
+                    <a href="/" class="links">Events</a>
+                    <a href="/" class="links">Nordic roaster</a>
+                    <a href="/" class="links">Results</a>
+                    <a href="/" class="links">Links</a>
+                    <a href="/" class="links">Contact</a>
+                    <div class="hidden-social">
+                        <img class="menu-social" src="assets/images/linkedin-white.svg" alt="">
+                        <img class="menu-social" src="assets/images/twitter-white.svg" alt="">
+                        <img class="menu-social" src="assets/images/instagram-white.svg" alt="">
+                        <img class="menu-social" src="assets/images/facebook-white.svg" alt="">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- SLIDER -->
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="assets/images/Coffee_1.png"  alt="">
+                <img src="assets/images/Coffee_2.png"  alt="">
+                <img src="assets/images/Coffee_3.png"  alt="">
+            </div>            
+        </div>
+        <!-- BUTTONS -->
+        <button id="prevBtn"></button>
+        <button id="nxtBtn"></button>
+        <div class="sub-slider" id="slide-text-1">
+            <p>"To create an environment in which knowledge about coffee and its sphere can be obtained"</p>
+        </div>   
+        <div class="sub-slider-2" id="slide-text-2">
+            <p>"This is a great introduction to the coffee industry's best beans on the planet"</p>
+        </div>   
+        <div class="sub-slider-3" id="slide-text-3">
+            <p>"Coffee in code out, this is the way of eternal life and empowerment of the soul"</p>
+        </div>
+        <div class="sub-slider-background">
+            <p>"Coffee in code out, this is the way of eternal life and empowerment of the soul"</p>
+        </div>  
+    </section>
+
+<!-- ARTICLES -->
+    <section class="article-container">
+        <div class="items-left">
+            <div class="article">
+                <div class="article-image">
+                    <img src="assets/images/Post-thumbnail-1.png" alt="">
+                </div>
+                <div class="article-text article-text-mobile">
+                    <h1 class="article-heading">Wonderful Copenhagen 2021</h1>
+                    <p class="article-publish">Published 12/07/21</p>
+                    <p class="article-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ut saepe sapiente eos magni esse iste autem eius nisi ea expedita minima quibusdam laudantium quam, fugiat eaque temporibus! Illum hic, omnis eos eius molestiae obcaecati at fugiat error corporis voluptatibus repudi...</p>
+                    <a class="read-more"  onclick="firstPopup()">Read More</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-image">
+                    <img src="assets/images/Post-thumbnail-2.png" alt="">
+                </div>
+                <div class="article-text">
+                    <h1 class="article-heading">The most expensive coffee on the market</h1>
+                    <p class="article-publish">Published 12/07/21</p>
+                    <p class="article-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ut saepe sapiente eos magni esse iste autem eius nisi ea expedita minima quibusdam laudantium quam, fugiat eaque temporibus! Illum hic, omnis eos eius molestiae obcaecati at fugiat error corporis voluptatibus repudi...</p>
+                    <a class="read-more" onclick="secondPopup()">Read More</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-image">
+                    <img src="assets/images/Post-thumbnail-3.png" alt="">
+                </div>
+                <div class="article-text">
+                    <h1 class="article-heading">10 types of coffee beans you need to know</h1>
+                    <p class="article-publish">Published 12/07/21</p>
+                    <p class="article-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ut saepe sapiente eos magni esse iste autem eius nisi ea expedita minima quibusdam laudantium quam, fugiat eaque temporibus! Illum hic, omnis eos eius molestiae obcaecati at fugiat error corporis voluptatibus repudi...</p>
+                    <a class="read-more" onclick="thirdPopup()">Read More</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-image">
+                    <img src="assets/images/Post-thumbnail-4.png" alt="">
+                </div>
+                <div class="article-text">
+                    <h1 class="article-heading">Challenge your barista skills to the max</h1>
+                    <p class="article-publish">Published 12/07/21</p>
+                    <p class="article-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ut saepe sapiente eos magni esse iste autem eius nisi ea expedita minima quibusdam laudantium quam, fugiat eaque temporibus! Illum hic, omnis eos eius molestiae obcaecati at fugiat error corporis voluptatibus repudi...</p>
+                    <a class="read-more" onclick="fourthPopup()">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-footer">
+                <a href="/" class="previous">
+                    Previous
+                </a>
+                <p class="pages">Page 1 of 3</p>
+                <a href="/" class="next">
+                    Next
+                </a>
+            </div>
+        </div>
+
+<!-- Items to the right of articles -->
+        <div class="items-right">
+            <div class="right-section" id="highlighted">
+                <h1 class="shop">WBC Shop</h1>
+                <p class="shop-empty">Your shopping cart is empty</p>
+                <a href="" class="shop-btn">Visit the shop</a>
+            </div>
+            <div class="right-section" id="highlighted">
+                <h1 class="next-event">Next event</h1>
+                <p class="wbc-cup">World Barista Cup 2021</p>
+                <p class="event-details">Copenhagen, Denmark</p>
+                <p class="event-details">Dates : 25th - 27th August 2011</p>
+                <p class="event-details" id="theme-sens">Theme : SENSORY</p>
+                <a href="" class="shop-btn">Sign Up Now</a>
+            </div>
+            <div class="right-section">
+                <h1 class="next-event score">Scoreboard</h1>
+                <p class="wbc-cup winner-list">List of winners from last year</p>
+                <p class="event-details" id="winners">2021 - ?<br>2020 - Denmark <br>2021 - Sweden <br>2021 - Turkey <br>2021 - Italy <br>2021 - Italy <br>2021 - Germany</p>
+            </div>
+        </div>
+    </section>
+
+<!-- SPONSORS -->
+    <section class="sponsors">
+        <div class="text-box">
+            <p>World Barista Cup Sponsors</p>
+        </div>
+        <div class="all-sponsors">
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-1.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-2.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-3.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-4.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-5.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-6.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-7.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-8.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-9.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-10.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-11.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-12.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-13.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-14.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-15.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-16.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-17.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-18.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-19.png" alt="">
+            </div>
+            <div class="sponsor-image">
+                <img src="assets/images/sponsor-20.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+<!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-top">
+            <div id="footer-logo">
+                <img src="assets/images/logo-white.png" alt="">
+            </div>
+                <div class="footer-social">
+                    <img class="navbar-social social-mobile" src="assets/images/linkedin-white.svg" alt="">
+                    <img class="navbar-social social-mobile" src="assets/images/twitter-white.svg" alt="">
+                    <img class="navbar-social social-mobile" src="assets/images/instagram-white.svg" alt="">
+                    <img class="navbar-social social-mobile" src="assets/images/facebook-white.svg" alt="">
+            </div>            
+        </div>
+        <div class="footer-bottom">
+            <div class="about-wbc">
+                <p class="footer-text">About World Barista Cup</p>
+                <p class="footer-details grey">The vision within The World Barista Cup</p>
+                <p class="footer-details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium officiis aperiam excepturi perferendis dolorum eius eum quidem modi. In, nihil voluptate dignissimos magnam odit molestiae, amet omnis libero asperiores facilis ipsa ipsum ullam delectus possimus porro debitis?</p>
+            </div>            
+            <div class="instagram">
+                <p class="footer-text instagram-text" id="footer-text-padding">Instagram feed</p>
+                <div class="instagram-images">
+                    <img src="assets/images/instagram-image-1.png" alt="">
+                    <img src="assets/images/instagram-image-2.png" alt="">
+                    <img src="assets/images/instagram-image-3.png" alt="">
+                    <img src="assets/images/instagram-image-4.png" alt="">
+                    <img src="assets/images/instagram-image-5.png" alt="">
+                    <img src="assets/images/instagram-image-6.png" alt="">
+                    <img src="assets/images/instagram-image-7.png" alt="">
+                    <img src="assets/images/instagram-image-8.png" alt="">
+                    <img src="assets/images/instagram-image-9.png" alt="">
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p class="footer-text" id="footer-text-padding">Contact</p>
+                <p class="footer-details">World Barista Cup</p>
+                <p class="footer-details grey">Amagertorv 13 <br>1160 Cophenhagen K <br>+45 33 12 04 28 <br>CVR: 11427693 <br>Email: info@worldbaristacup.com</p>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom">        
+    </div>
+
+<!-- ARTICLE POPUPS -->
+</div>
+    <div class="popup-container" id="popup1">
+        <div class="article-popup">
+            <div class="close-container">
+                <div class="close-mobile">
+                    <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeFirst()">
+                </div>    
+            </div>
+            <img class="popup-image" src="assets/images/Post-thumbnail-1.png" alt="">              
+            <div class="popup-text">
+                <h1>Wonderful Copenhagen 2021</h1>
+                <p class="popup-publish">Published 12/07/21</p>
+                <p class="popup-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quod, nostrum aut voluptatum suscipit quaerat blanditiis beatae nulla explicabo velit quo! Voluptatem, explicabo quia necessitatibus ipsum accusantium ipsa officia ex reiciendis enim minima porro dignissimos molestiae sunt error exercitationem doloribus qui, animi quidem iste.<br><br></p>     
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magnam ratione. Sint soluta laborum iure nisi odit adipisci blanditiis ratione autem dolore itaque, expedita saepe voluptates laboriosam quisquam voluptatum fugiat laudantium mollitia, exercitationem sapiente. Reprehenderit eos suscipit accusantium perspiciatis non, quisquam explicabo et ratione! Totam omnis eaque praesentium rerum sit quis repellat explicabo, ut perspiciatis perferendis nostrum pariatur blanditiis consequatur!<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique autem saepe aspernatur reiciendis quos id perspiciatis velit molestias voluptas alias omnis iste facere iure culpa officia voluptate, deleniti, impedit ea, dignissimos nisi voluptatibus reprehenderit minus veniam. Nostrum, assumenda aspernatur? Esse excepturi sapiente perspiciatis quisquam corrupti officiis hic, atque, rerum tempora reiciendis officia voluptatibus vitae magnam.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sint iusto culpa, iste magnam nobis inventore eos adipisci obcaecati dolores sed quasi ducimus atque quae eius voluptatum asperiores. Quidem, laudantium. Suscipit fugit nam quisquam deleniti nesciunt? Earum laboriosam officiis debitis atque voluptatum! Voluptate dolores atque totam autem nemo velit, nobis accusamus ea voluptatem ipsa consectetur unde fugit maxime laudantium non nostrum, sequi quibusdam, illo ut enim itaque et. Ea eos, repudiandae saepe deleniti voluptatum odio hic excepturi autem eum enim exercitationem sequi eaque impedit temporibus incidunt nisi, quos iste quasi consectetur modi laudantium fuga. Ad?<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique tenetur dolor officiis, optio sint nulla consectetur voluptates in, consequatur numquam dolorum culpa dicta quos hic voluptatum molestias eum praesentium voluptas tempora fugiat architecto nemo quia? Sint blanditiis amet, magnam doloribus, pariatur perferendis ipsa iusto dignissimos iure harum quis consequatur dicta porro neque iste eum ullam natus quibusdam facilis tempore est a eos laborum. Accusantium, reiciendis.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, delectus! Repellat qui nulla officia nisi laudantium iste ipsa labore illum architecto? Corrupti nostrum quaerat molestias minima libero nulla accusamus in consequatur nam! Expedita sed cupiditate explicabo debitis beatae incidunt quis ex asperiores? Nemo animi voluptas consectetur? Dolorum in vero nulla corrupti ad, veritatis deserunt vitae architecto, rem nobis facilis delectus cum consequatur alias!<br><br></p>
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis voluptates molestiae nostrum laudantium, sit ullam optio ea autem dolorum impedit voluptatibus excepturi odio veritatis molestias sed ipsam nulla ratione modi tenetur, sint in a eligendi. Reprehenderit perferendis quisquam incidunt iure debitis enim neque culpa modi, error accusamus explicabo unde!</p>
+            </div>                         
+        </div>
+        <div class="close">
+            <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeFirst()">
+        </div>       
+    </div>
+    <div class="popup-container" id="popup2">
+        <div class="article-popup">
+            <div class="close-container">
+                <div class="close-mobile">
+                    <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeSecond()">
+                </div>    
+            </div> 
+            <img class="popup-image" src="assets/images/Post-thumbnail-2.png" alt="">             
+            <div class="popup-text">
+                <h1>The most expensive coffee on the market</h1>
+                <p class="popup-publish">Published 12/07/21</p>
+                <p class="popup-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quod, nostrum aut voluptatum suscipit quaerat blanditiis beatae nulla explicabo velit quo! Voluptatem, explicabo quia necessitatibus ipsum accusantium ipsa officia ex reiciendis enim minima porro dignissimos molestiae sunt error exercitationem doloribus qui, animi quidem iste.<br><br></p>     
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magnam ratione. Sint soluta laborum iure nisi odit adipisci blanditiis ratione autem dolore itaque, expedita saepe voluptates laboriosam quisquam voluptatum fugiat laudantium mollitia, exercitationem sapiente. Reprehenderit eos suscipit accusantium perspiciatis non, quisquam explicabo et ratione! Totam omnis eaque praesentium rerum sit quis repellat explicabo, ut perspiciatis perferendis nostrum pariatur blanditiis consequatur!<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique autem saepe aspernatur reiciendis quos id perspiciatis velit molestias voluptas alias omnis iste facere iure culpa officia voluptate, deleniti, impedit ea, dignissimos nisi voluptatibus reprehenderit minus veniam. Nostrum, assumenda aspernatur? Esse excepturi sapiente perspiciatis quisquam corrupti officiis hic, atque, rerum tempora reiciendis officia voluptatibus vitae magnam.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sint iusto culpa, iste magnam nobis inventore eos adipisci obcaecati dolores sed quasi ducimus atque quae eius voluptatum asperiores. Quidem, laudantium. Suscipit fugit nam quisquam deleniti nesciunt? Earum laboriosam officiis debitis atque voluptatum! Voluptate dolores atque totam autem nemo velit, nobis accusamus ea voluptatem ipsa consectetur unde fugit maxime laudantium non nostrum, sequi quibusdam, illo ut enim itaque et. Ea eos, repudiandae saepe deleniti voluptatum odio hic excepturi autem eum enim exercitationem sequi eaque impedit temporibus incidunt nisi, quos iste quasi consectetur modi laudantium fuga. Ad?<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique tenetur dolor officiis, optio sint nulla consectetur voluptates in, consequatur numquam dolorum culpa dicta quos hic voluptatum molestias eum praesentium voluptas tempora fugiat architecto nemo quia? Sint blanditiis amet, magnam doloribus, pariatur perferendis ipsa iusto dignissimos iure harum quis consequatur dicta porro neque iste eum ullam natus quibusdam facilis tempore est a eos laborum. Accusantium, reiciendis.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, delectus! Repellat qui nulla officia nisi laudantium iste ipsa labore illum architecto? Corrupti nostrum quaerat molestias minima libero nulla accusamus in consequatur nam! Expedita sed cupiditate explicabo debitis beatae incidunt quis ex asperiores? Nemo animi voluptas consectetur? Dolorum in vero nulla corrupti ad, veritatis deserunt vitae architecto, rem nobis facilis delectus cum consequatur alias!<br><br></p>
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis voluptates molestiae nostrum laudantium, sit ullam optio ea autem dolorum impedit voluptatibus excepturi odio veritatis molestias sed ipsam nulla ratione modi tenetur, sint in a eligendi. Reprehenderit perferendis quisquam incidunt iure debitis enim neque culpa modi, error accusamus explicabo unde!</p>
+            </div>
+        </div>
+        <div class="close">
+            <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeSecond()">
+        </div>       
+    </div>
+    </div>
+    <div class="popup-container" id="popup3">
+        <div class="article-popup">
+            <div class="close-container">
+                <div class="close-mobile">
+                    <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeThird()">
+                </div>    
+            </div>
+            <img class="popup-image" src="assets/images/Post-thumbnail-3.png" alt="">  
+            <div class="popup-text">
+                <h1>10 types of coffee beans you need to know</h1>
+                <p class="popup-publish">Published 12/07/21</p>
+                <p class="popup-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quod, nostrum aut voluptatum suscipit quaerat blanditiis beatae nulla explicabo velit quo! Voluptatem, explicabo quia necessitatibus ipsum accusantium ipsa officia ex reiciendis enim minima porro dignissimos molestiae sunt error exercitationem doloribus qui, animi quidem iste.<br><br></p>     
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magnam ratione. Sint soluta laborum iure nisi odit adipisci blanditiis ratione autem dolore itaque, expedita saepe voluptates laboriosam quisquam voluptatum fugiat laudantium mollitia, exercitationem sapiente. Reprehenderit eos suscipit accusantium perspiciatis non, quisquam explicabo et ratione! Totam omnis eaque praesentium rerum sit quis repellat explicabo, ut perspiciatis perferendis nostrum pariatur blanditiis consequatur!<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique autem saepe aspernatur reiciendis quos id perspiciatis velit molestias voluptas alias omnis iste facere iure culpa officia voluptate, deleniti, impedit ea, dignissimos nisi voluptatibus reprehenderit minus veniam. Nostrum, assumenda aspernatur? Esse excepturi sapiente perspiciatis quisquam corrupti officiis hic, atque, rerum tempora reiciendis officia voluptatibus vitae magnam.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sint iusto culpa, iste magnam nobis inventore eos adipisci obcaecati dolores sed quasi ducimus atque quae eius voluptatum asperiores. Quidem, laudantium. Suscipit fugit nam quisquam deleniti nesciunt? Earum laboriosam officiis debitis atque voluptatum! Voluptate dolores atque totam autem nemo velit, nobis accusamus ea voluptatem ipsa consectetur unde fugit maxime laudantium non nostrum, sequi quibusdam, illo ut enim itaque et. Ea eos, repudiandae saepe deleniti voluptatum odio hic excepturi autem eum enim exercitationem sequi eaque impedit temporibus incidunt nisi, quos iste quasi consectetur modi laudantium fuga. Ad?<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique tenetur dolor officiis, optio sint nulla consectetur voluptates in, consequatur numquam dolorum culpa dicta quos hic voluptatum molestias eum praesentium voluptas tempora fugiat architecto nemo quia? Sint blanditiis amet, magnam doloribus, pariatur perferendis ipsa iusto dignissimos iure harum quis consequatur dicta porro neque iste eum ullam natus quibusdam facilis tempore est a eos laborum. Accusantium, reiciendis.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, delectus! Repellat qui nulla officia nisi laudantium iste ipsa labore illum architecto? Corrupti nostrum quaerat molestias minima libero nulla accusamus in consequatur nam! Expedita sed cupiditate explicabo debitis beatae incidunt quis ex asperiores? Nemo animi voluptas consectetur? Dolorum in vero nulla corrupti ad, veritatis deserunt vitae architecto, rem nobis facilis delectus cum consequatur alias!<br><br></p>
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis voluptates molestiae nostrum laudantium, sit ullam optio ea autem dolorum impedit voluptatibus excepturi odio veritatis molestias sed ipsam nulla ratione modi tenetur, sint in a eligendi. Reprehenderit perferendis quisquam incidunt iure debitis enim neque culpa modi, error accusamus explicabo unde!</p>
+            </div>
+        </div>
+        <div class="close">
+            <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeThird()">
+        </div>
+    </div>
+    <div class="popup-container" id="popup4">
+        <div class="article-popup">
+            <div class="close-container">
+                <div class="close-mobile">
+                    <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeFourth()">
+                </div>    
+            </div>
+            <img class="popup-image" src="assets/images/Post-thumbnail-4.png" alt="">  
+            <div class="popup-text">
+                <h1>Challenge your barista skills to the max</h1>
+                <p class="popup-publish">Published 12/07/21</p>
+                <p class="popup-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quod, nostrum aut voluptatum suscipit quaerat blanditiis beatae nulla explicabo velit quo! Voluptatem, explicabo quia necessitatibus ipsum accusantium ipsa officia ex reiciendis enim minima porro dignissimos molestiae sunt error exercitationem doloribus qui, animi quidem iste.<br><br></p>     
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magnam ratione. Sint soluta laborum iure nisi odit adipisci blanditiis ratione autem dolore itaque, expedita saepe voluptates laboriosam quisquam voluptatum fugiat laudantium mollitia, exercitationem sapiente. Reprehenderit eos suscipit accusantium perspiciatis non, quisquam explicabo et ratione! Totam omnis eaque praesentium rerum sit quis repellat explicabo, ut perspiciatis perferendis nostrum pariatur blanditiis consequatur!<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique autem saepe aspernatur reiciendis quos id perspiciatis velit molestias voluptas alias omnis iste facere iure culpa officia voluptate, deleniti, impedit ea, dignissimos nisi voluptatibus reprehenderit minus veniam. Nostrum, assumenda aspernatur? Esse excepturi sapiente perspiciatis quisquam corrupti officiis hic, atque, rerum tempora reiciendis officia voluptatibus vitae magnam.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sint iusto culpa, iste magnam nobis inventore eos adipisci obcaecati dolores sed quasi ducimus atque quae eius voluptatum asperiores. Quidem, laudantium. Suscipit fugit nam quisquam deleniti nesciunt? Earum laboriosam officiis debitis atque voluptatum! Voluptate dolores atque totam autem nemo velit, nobis accusamus ea voluptatem ipsa consectetur unde fugit maxime laudantium non nostrum, sequi quibusdam, illo ut enim itaque et. Ea eos, repudiandae saepe deleniti voluptatum odio hic excepturi autem eum enim exercitationem sequi eaque impedit temporibus incidunt nisi, quos iste quasi consectetur modi laudantium fuga. Ad?<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique tenetur dolor officiis, optio sint nulla consectetur voluptates in, consequatur numquam dolorum culpa dicta quos hic voluptatum molestias eum praesentium voluptas tempora fugiat architecto nemo quia? Sint blanditiis amet, magnam doloribus, pariatur perferendis ipsa iusto dignissimos iure harum quis consequatur dicta porro neque iste eum ullam natus quibusdam facilis tempore est a eos laborum. Accusantium, reiciendis.<br><br></p>
+                <p class="popup-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, delectus! Repellat qui nulla officia nisi laudantium iste ipsa labore illum architecto? Corrupti nostrum quaerat molestias minima libero nulla accusamus in consequatur nam! Expedita sed cupiditate explicabo debitis beatae incidunt quis ex asperiores? Nemo animi voluptas consectetur? Dolorum in vero nulla corrupti ad, veritatis deserunt vitae architecto, rem nobis facilis delectus cum consequatur alias!<br><br></p>
+                <p class="popup-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis voluptates molestiae nostrum laudantium, sit ullam optio ea autem dolorum impedit voluptatibus excepturi odio veritatis molestias sed ipsam nulla ratione modi tenetur, sint in a eligendi. Reprehenderit perferendis quisquam incidunt iure debitis enim neque culpa modi, error accusamus explicabo unde!</p>
+            </div>
+        </div>
+        <div class="close">
+            <img src="assets/images/close.svg" class="close-btn" alt="" onclick="closeFourth()">
+        </div>
+    </div>
+</body>
+<script src="wbc.js"></script>
+</html>

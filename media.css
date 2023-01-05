@@ -1,0 +1,41 @@
+@media screen and (max-width: 700px) {
+    * {
+        padding: 0;
+
+    }
+    #wrapper {
+        
+    }
+    #header-container {
+        height: 20vh;
+        display:block;
+        margin-bottom: 10px;
+    }
+
+    #links-container {
+        padding: 0rem;
+        width: 80%;
+    }
+
+    #hero {
+        width: 80%;
+        padding: 0rem;
+
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .links {
+        font-size: 2.5rem;
+    }
+    #hero {
+        width: 100%;
+    }
+}

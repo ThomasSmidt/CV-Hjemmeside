@@ -77,23 +77,29 @@ function shuffleDeck(deck) {
     }
 }
 
-function runGame() {   
+async function runGame() {   
     let hiddenCardImage = document.getElementById("hidden-card");
     hiddenCardImage.src = "/assets/img/cardBack_newRed.png";   
     hiddenCard = deck.pop();
     console.log(hiddenCard)
     dealerTotal += hiddenCard.cardWeight;
-    createCard("dealer-cards", isDealer)  
-    for (let i = 0; i < 2; i++) {
-        createCard("player-cards", isDealer = false)
-    }
+    await sleep(200);
+    createCard("dealer-cards", isDealer);
     dealerTotalMinusHidden = dealerTotal - hiddenCard.cardWeight;
     document.getElementById("dealer-total").innerHTML = "Dealer: " + dealerTotalMinusHidden;
-    document.getElementById("player-total").innerHTML = "You: " + playerTotal;
+    await sleep(200);
+    for (let i = 0; i < 2; i++) {
+        createCard("player-cards", isDealer = false)
+        document.getElementById("player-total").innerHTML = "You: " + playerTotal;
+        await sleep(200);
+    }
+    toggleHit()
+    toggleStay()
+    
 }
 
 
-async function createCard(playerOrDealerCards = "", isDealer) {
+function createCard(playerOrDealerCards = "", isDealer) {
     let cardImg = document.createElement("img");
     let card = deck.pop(); 
     if (isDealer) {
@@ -144,6 +150,8 @@ async function stay() {
     canHit = false;
     console.log("dealer: " + dealerTotal + "player: " + playerTotal)
     document.getElementById("hidden-card").src = "/assets/img/" + hiddenCard.cardValue + "_" + hiddenCard.cardSuit + ".png";
+    await sleep(500);
+
     while(dealerTotal < 17){
       isDealer = true;
       let cardImg = document.createElement("img");
@@ -157,12 +165,10 @@ async function stay() {
       cardImg.src = "/assets/img/" + card.cardValue + "_" + card.cardSuit + ".png";
       cardImg.className='card-image';
       document.getElementById("dealer-cards").append(cardImg);
-      // Add a delay of 1 second (1000 milliseconds)
+      document.getElementById("dealer-total").innerHTML = "Dealer: " + dealerTotal;
+      document.getElementById("player-total").innerHTML = "You:   " + playerTotal;
       await sleep(500);
     }
-    
-    document.getElementById("dealer-total").innerHTML = "Dealer: " + dealerTotal;
-    document.getElementById("player-total").innerHTML = "You:   " + playerTotal;
     checkRound();
 }
 
@@ -288,8 +294,6 @@ function bet() {
         document.getElementById("chips").innerHTML = "Chips: " + playerChips; 
         document.getElementById("currentBet").innerHTML = "Current Bet: " + currentBet;  
         hasBet = true;
-        toggleHit()
-        toggleStay()
         runGame();
     }
     return;
